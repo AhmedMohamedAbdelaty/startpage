@@ -1,9 +1,9 @@
-`use strict`;
+'use strict';
 
 // display time as hh:mm
 const options = {
-    timeZone:"America/Chicago",
-    hour12 : false,
+    timeZone:"Africa/Cairo",
+    hour12 : true,
     hour:  "2-digit",
     minute: "2-digit",
 }

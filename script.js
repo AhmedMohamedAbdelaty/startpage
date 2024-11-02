@@ -19,10 +19,13 @@ var myVar = setInterval(function () {
 
 function myTimer() {
     var today = new Date();
-
     var time = today.toLocaleTimeString(locale, options);
-
     document.getElementById("time").textContent = time;
+
+    // Update prayer time every minute
+    if (today.getSeconds() === 0) {
+        updatePrayerTime();
+    }
 }
 
 function myDate() {
@@ -34,4 +37,5 @@ function myDate() {
 
 document.addEventListener("DOMContentLoaded", function() {
     myDate(); // Update date on page load
+    updatePrayerTime(); // Initial prayer time update
 });
